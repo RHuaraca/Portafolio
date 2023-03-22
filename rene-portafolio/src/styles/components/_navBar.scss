@@ -1,0 +1,89 @@
+.navbar_container{
+    margin: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: $color_secundario_medio;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    .menuImg{
+        display: none;
+    }
+    img{
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .perfilInicio{
+        height: $tamanio_inicio;
+        width: $tamanio_inicio;
+    }
+    .perfilAbout{
+        display: none;
+    }
+    .perfilOthers{
+        height: $tamanio_otros;
+        width: $tamanio_otros;
+    }
+    ul{
+        margin:0px;
+        list-style: none;
+        display: flex;
+        padding-left: 0;
+        li{
+            a{
+                color: $color_contraste_claro;
+                text-decoration: none;
+                display: block;
+                padding: 0.3em;
+            }
+            :hover{
+                background-color: $color_terciario_claro;
+            }
+        }
+    }
+    @media screen and (max-width:800px) {
+        ul{
+            width: 75%;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    @media screen and (max-width:600px){
+        display: flex;
+        flex-direction: column;
+        .navbar_imageContainer{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .menuImg{
+            width: $tamanio_menuinicio;
+            display: block;
+            cursor: pointer;
+        }
+        .ocultar{
+            display: none;
+        }
+        .mostrar{
+            flex-direction: column;
+            width: 100%;
+            gap: 0;
+            li{
+                width: 100%;
+                border-top: solid;
+                border-color: $color_primario_oscuro;
+                border-width: 1px;
+                text-align:end;
+                padding-right: 3em;
+                .enlace{
+                    display: block;
+                    width: 100%;
+                    padding: 1em;
+                }
+            }
+        }
+    }
+}

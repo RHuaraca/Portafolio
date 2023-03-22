@@ -1,24 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import { Navigate, Route, Routes } from "react-router-dom";
+import NavBarInicio from "./components/NavBarInicio";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <NavBarInicio />
+      <Routes>
+        <Route
+          path="/Home"
+          element={
+            <>
+              <div>Inicio</div>
+            </>
+          }
+        />
+        <Route
+          path="/About"
+          element={
+            <>
+              {/* <NavBarAbout/> */}
+              <div>Sobre mi</div>
+            </>
+          }
+        />
+        <Route
+          path="/Skills"
+          element={
+            <>
+              {/* <NavBarOthers/> */}
+              <div>Habilidades</div>
+            </>
+          }
+        />
+        <Route
+          path="/Portfolio"
+          element={
+            <>
+              {/* <NavBarOthers/> */}
+              <div>Portafolio</div>
+            </>
+          }
+        />
+        <Route path="/Contact" element={<div>Contacto</div>} />
+        <Route path="*" element={<Navigate replace to="/Home" />} />
+      </Routes>
+    </>
   );
 }
 
