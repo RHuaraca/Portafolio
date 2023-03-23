@@ -11,13 +11,11 @@
     .menuImg{
         display: none;
     }
-    img{
-        border-radius: 50%;
-        overflow: hidden;
-    }
     .perfilInicio{
         height: $tamanio_inicio;
         width: $tamanio_inicio;
+        border-radius: 50%;
+        overflow: hidden;
     }
     .perfilAbout{
         display: none;
@@ -25,6 +23,8 @@
     .perfilOthers{
         height: $tamanio_otros;
         width: $tamanio_otros;
+        border-radius: 50%;
+        overflow: hidden;
     }
     ul{
         margin:0px;

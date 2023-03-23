@@ -1,10 +1,12 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import NavBarInicio from "./components/NavBarInicio";
+import SwitchIngles from "./components/SwitchIngles";
 
 function App() {
   return (
     <>
       <NavBarInicio />
+      <SwitchIngles />
       <Routes>
         <Route
           path="/Home"

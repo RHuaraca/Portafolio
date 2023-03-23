@@ -15,11 +15,11 @@ export default function NavBarInicio(){
     return (
         <nav className="navbar_container">
             <div className="navbar_imageContainer">
-                <Link to="/About"><img src={foto}  alt="foto de perfil" className={location.pathname==="Home"?`perfilInicio`:null}/></Link>
+                <Link to="/About"><img src={foto}  alt="foto de perfil" className={location.pathname==="/Home"?`perfilInicio`:location.pathname==="/About"?'perfilAbout':'perfilOthers'}/></Link>
                 <img src={iconoMenu} alt="menu" className="menuImg" onClick={()=>ocultar()}/>   
             </div>
             <ul className={menu}>
-                {opcionesEspaniol.map((opcion,i)=><li key={i}><Link to={location.pathname!==opcionesIngles[i]?`/${opcionesIngles[i]}`:null} className="enlace" >{opcion}</Link></li>)}
+                {opcionesEspaniol.map((opcion,i)=><li key={i} onClick={()=>ocultar()}><Link to={location.pathname!==opcionesIngles[i]?`/${opcionesIngles[i]}`:null} className="enlace" >{opcion}</Link></li>)}
             </ul>
         </nav>
     );
