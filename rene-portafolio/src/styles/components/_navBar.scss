@@ -1,14 +1,17 @@
 .navbar_container{
     margin: 0px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
     padding-left: 10%;
     padding-right: 10%;
     background-color: $color_secundario_medio;
     display:flex;
     justify-content: space-between;
     align-items: center;
-    .menuImg{
+    .menuImgInicio{
+        display: none;
+    }
+    .menuImgOthers{
         display: none;
     }
     .perfilInicio{
@@ -59,11 +62,17 @@
             justify-content: space-between;
             align-items: center;
         }
-        .menuImg{
+        .menuImgInicio{
             width: $tamanio_menuinicio;
             display: block;
             cursor: pointer;
         }
+        .menuImgOthers{
+            width: $tamanio_menuotros;
+            display: block;
+            cursor: pointer;
+        }
+
         .ocultar{
             display: none;
         }

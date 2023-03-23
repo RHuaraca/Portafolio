@@ -1,0 +1,41 @@
+.home_container{
+  height: 85.4vh;
+  background-image: url("../../assets/fondoInicio.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1{
+    margin: 0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-top: 40vh;
+    font-size: 4.4em;
+    color: $color_contraste_claro;
+    -webkit-text-stroke: 1px $color_secundario_medio;
+  }
+  h2{
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 3em;
+    color: $color_contraste_oscuro;
+    -webkit-text-stroke: 0.5px $color_terciario_claro;
+  }
+  @media screen and (max-width:600px){
+    background-image: url("../../assets/fondoInicioMovil.jpg");
+    h1{
+      padding-top: 35vh;
+      font-size: 3em;
+      color: $color_contraste_claro;
+      -webkit-text-stroke: 1px $color_secundario_medio;
+    }
+      h2{
+      margin: 0;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: 2em;
+      color: $color_contraste_oscuro;
+      -webkit-text-stroke: 0.5px $color_terciario_claro;
+    }
+  }
+}

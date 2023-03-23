@@ -1,21 +1,19 @@
 import { Navigate, Route, Routes } from "react-router-dom";
+import DarkmodeSwitch from "./components/DarkmodeSwitch";
+import Home from "./components/Home";
 import NavBarInicio from "./components/NavBarInicio";
 import SwitchIngles from "./components/SwitchIngles";
 
 function App() {
   return (
     <>
-      <NavBarInicio />
-      <SwitchIngles />
+      <div className="header_container">
+        <NavBarInicio />
+        <SwitchIngles />
+        <DarkmodeSwitch />
+      </div>
       <Routes>
-        <Route
-          path="/Home"
-          element={
-            <>
-              <div>Inicio</div>
-            </>
-          }
-        />
+        <Route path="/Home" element={<Home />} />
         <Route
           path="/About"
           element={
