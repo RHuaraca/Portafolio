@@ -8,13 +8,14 @@ export default function NavBarInicio(){
     let location = useLocation();
     let [menu, setMenu] = useState("ocultar");
     let idiomaActual = useSelector(state=>state.idioma)
+    let modoActual = useSelector(state=>state.modoColor)
     function ocultar(){
         setMenu(menu==="mostrar"?menu="ocultar":menu="mostrar")
     }
     let opciones = useSelector(state=>state.traducciones[idiomaActual].opcionesBarraNavegacion);
     let opcionesIngles = useSelector(state=>state.traducciones.en.opcionesBarraNavegacion);
     return (
-        <nav className="navbar_container">
+        <nav className={modoActual==="oscuro"?"navbar_container":"navbar_container_lightMode"}>
             <div className="navbar_imageContainer">
                 <Link to="/About"><img src={foto}  alt="foto de perfil" className={location.pathname==="/Home"?`perfilInicio`:location.pathname==="/About"?'perfilAbout':'perfilOthers'}/></Link>
                 <img src={iconoMenu} alt="menu" className={location.pathname==="/Home"?"menuImgInicio":"menuImgOthers"} onClick={()=>ocultar()}/>   
