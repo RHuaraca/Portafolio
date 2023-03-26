@@ -1,6 +1,7 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import DarkmodeSwitch from "./components/DarkmodeSwitch";
 import Home from "./components/Home";
+import IconoGithub from "./components/IconoGithub";
 import NavBarInicio from "./components/NavBarInicio";
 import SwitchIngles from "./components/SwitchIngles";
 
@@ -11,14 +12,21 @@ function App() {
         <NavBarInicio />
         <SwitchIngles />
         <DarkmodeSwitch />
+        <IconoGithub />
       </div>
       <Routes>
-        <Route path="/Home" element={<Home />} />
+        <Route
+          path="/Home"
+          element={
+            <>
+              <Home />
+            </>
+          }
+        />
         <Route
           path="/About"
           element={
             <>
-              {/* <NavBarAbout/> */}
               <div>Sobre mi</div>
             </>
           }

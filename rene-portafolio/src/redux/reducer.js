@@ -14,8 +14,7 @@ const initialState = {
         "Portafolio",
         "Contacto",
       ],
-      profesion: "desarrollador full stack",
-      otro: "vdf",
+      profesion: "Desarrollador full stack",
     },
     en: {
       opcionesBarraNavegacion: [
@@ -25,7 +24,7 @@ const initialState = {
         "Portfolio",
         "Contact",
       ],
-      profesion: "full stack developer",
+      profesion: "Full stack developer",
     },
   },
 };
