@@ -41,7 +41,8 @@
                 transition: color 1s;
                 text-decoration: none;
                 display: block;
-                padding: 0.3em;
+                height: 3vh;
+                padding: 0.5vh;
             }
             :hover{
                 background-color: $color_terciario_claro;
@@ -151,7 +152,8 @@
                 transition: color 1s;
                 text-decoration: none;
                 display: block;
-                padding: 0.3em;
+                height: 3vh;
+                padding: 0.5vh;
             }
             :hover{
                 background-color: $colorc_contraste_claro;

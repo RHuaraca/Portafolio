@@ -1,4 +1,5 @@
 import { Navigate, Route, Routes } from "react-router-dom";
+import About from "./components/About";
 import DarkmodeSwitch from "./components/DarkmodeSwitch";
 import Home from "./components/Home";
 import IconoGithub from "./components/IconoGithub";
@@ -12,25 +13,11 @@ function App() {
         <NavBarInicio />
         <SwitchIngles />
         <DarkmodeSwitch />
-        <IconoGithub />
       </div>
+      <IconoGithub />
       <Routes>
-        <Route
-          path="/Home"
-          element={
-            <>
-              <Home />
-            </>
-          }
-        />
-        <Route
-          path="/About"
-          element={
-            <>
-              <div>Sobre mi</div>
-            </>
-          }
-        />
+        <Route path="/Home" element={<Home />} />
+        <Route path="/About" element={<About />} />
         <Route
           path="/Skills"
           element={
