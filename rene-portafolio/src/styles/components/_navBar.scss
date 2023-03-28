@@ -9,6 +9,9 @@
     display:flex;
     justify-content: space-between;
     align-items: center;
+    .active{
+        text-decoration:underline;
+    }
     .menuImgInicio{
         display: none;
     }
@@ -120,6 +123,9 @@
     display:flex;
     justify-content: space-between;
     align-items: center;
+    .active{
+        text-decoration:underline;
+    }
     .menuImgInicio{
         display: none;
     }
