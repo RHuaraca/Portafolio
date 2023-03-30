@@ -1,6 +1,16 @@
 // Importa los tipos de acciones necesarios
 import { CAMBIAR_IDIOMA, CAMBIAR_MODO_COLOR } from "./actionTypes.js";
-
+import htmlLogo from "../assets/html5.png";
+import cssLogo from "../assets/css-3.png";
+import javascriptLogo from "../assets/js.png";
+import reactLogo from "../assets/react.png";
+import reduxLogo from "../assets/redux.svg";
+import reactRouterLogo from "../assets/react-router.png";
+import postgresLogo from "../assets/postgresql.png";
+import sequelizeLogo from "../assets/sequelize.png";
+import nodejsLogo from "../assets/nodejs.png";
+import sassLogo from "../assets/sass.png";
+import figmaLogo from "../assets/figma.png";
 // Define el estado inicial del reducer
 const initialState = {
   modoColor: "oscuro",
@@ -22,6 +32,69 @@ const initialState = {
         "Mi objetivo profesional es convertirme en un programador destacado gracias a mis habilidades y conocimientos. Me comprometo a seguir aprendiendo y actualizándome constantemente en este campo para lograr este objetivo. Además, me interesa explorar otras tecnologías, como la inteligencia artificial, y me gustaría tener la oportunidad de trabajar con ellas en la práctica.",
       aboutP3:
         "Creo en la importancia de la honestidad, la ética y la responsabilidad en mi trabajo. Estoy comprometido a trabajar de manera diligente y eficiente en cada proyecto, y a colaborar con mi equipo para lograr los mejores resultados posibles.",
+      lenguajes: [
+        {
+          title: "HTML",
+          logo: htmlLogo,
+          nivel: 4,
+        },
+        {
+          title: "CSS",
+          logo: cssLogo,
+          nivel: 3,
+        },
+        {
+          title: "JavaScript",
+          logo: javascriptLogo,
+          nivel: 4,
+        },
+      ],
+      librerias: [
+        {
+          title: "React",
+          logo: reactLogo,
+          nivel: 4,
+        },
+        {
+          title: "Redux",
+          logo: reduxLogo,
+          nivel: 4,
+        },
+        {
+          title: "React Router",
+          logo: reactRouterLogo,
+          nivel: 4,
+        },
+        {
+          title: "Sequelize",
+          logo: sequelizeLogo,
+          nivel: 4,
+        },
+      ],
+      dataBases: [
+        {
+          title: "PostgreSQL",
+          logo: postgresLogo,
+          nivel: 3,
+        },
+      ],
+      otros: [
+        {
+          title: "Node.js",
+          logo: nodejsLogo,
+          nivel: "-",
+        },
+        {
+          title: "Sass",
+          logo: sassLogo,
+          nivel: 3,
+        },
+        {
+          title: "Figma",
+          logo: figmaLogo,
+          nivel: 3,
+        },
+      ],
     },
     en: {
       opcionesBarraNavegacion: [
