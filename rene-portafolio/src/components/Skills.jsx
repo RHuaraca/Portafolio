@@ -3,13 +3,14 @@ import {useSelector} from "react-redux";
 
 export default function Skills(){
   const idiomaActual = useSelector(state=>state.idioma)
-  const lenguajes = useSelector(state=>state.traducciones[idiomaActual].lenguajes)
-  const librerias = useSelector(state=>state.traducciones[idiomaActual].librerias)
-  const dataBases = useSelector(state=>state.traducciones[idiomaActual].dataBases)
-  const otros = useSelector(state => state.traducciones[idiomaActual].otros)
+  const lenguajes = useSelector(state=>state.habilidades.lenguajes)
+  const librerias = useSelector(state=>state.habilidades.librerias)
+  const dataBases = useSelector(state=>state.habilidades.dataBases)
+  const otros = useSelector(state => state.habilidades.otros)
+  const idiomas = useSelector(state => state.traducciones[idiomaActual].skills)
   return(
     <div className="skills_container">
-      <h5>Lenguajes:</h5>
+      <h5>{idiomas.lenguajes}</h5>
       <div className="skills_section">
         {lenguajes?.map((lenguaje,i)=>(
         <Skill 
@@ -18,7 +19,7 @@ export default function Skills(){
         logo={lenguaje.logo}
         nivel={lenguaje.nivel}/>))}
       </div>
-      <h5>Librerías:</h5>
+      <h5>{idiomas.librerias}</h5>
       <div className="skills_section">
         {librerias?.map((libreria,i)=>(
           <Skill
@@ -29,7 +30,7 @@ export default function Skills(){
           />
         ))}
       </div>
-      <h5>Bases de datos:</h5>
+      <h5>{idiomas.dataBases}</h5>
       <div className="skills_section">
         {dataBases?.map((dataBase,i)=>(
           <Skill
@@ -40,7 +41,7 @@ export default function Skills(){
           />
         ))}
       </div>
-      <h5>Entornos, Preprocesadores, Herramientas y otros:</h5>
+      <h5>{idiomas.otros}</h5>
       <div className="skills_section">
         {otros?.map((otro,i)=>(
           <Skill
@@ -52,7 +53,7 @@ export default function Skills(){
         ))}
       </div>
       <footer>
-        <p>Algunos íconos fueron tomados de la página <a href="https://www.flaticon.com/">Flaticon</a></p>
+        <p>{idiomas.footer} <a href="https://www.flaticon.com/">Flaticon</a></p>
       </footer>
     </div>
   )

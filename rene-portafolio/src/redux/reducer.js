@@ -15,6 +15,71 @@ import figmaLogo from "../assets/figma.png";
 const initialState = {
   modoColor: "oscuro",
   idioma: "es",
+  habilidades: {
+    lenguajes: [
+      {
+        title: "HTML",
+        logo: htmlLogo,
+        nivel: 4,
+      },
+      {
+        title: "CSS",
+        logo: cssLogo,
+        nivel: 3,
+      },
+      {
+        title: "JavaScript",
+        logo: javascriptLogo,
+        nivel: 4,
+      },
+    ],
+    librerias: [
+      {
+        title: "React",
+        logo: reactLogo,
+        nivel: 4,
+      },
+      {
+        title: "Redux",
+        logo: reduxLogo,
+        nivel: 4,
+      },
+      {
+        title: "React Router",
+        logo: reactRouterLogo,
+        nivel: 4,
+      },
+      {
+        title: "Sequelize",
+        logo: sequelizeLogo,
+        nivel: 4,
+      },
+    ],
+    dataBases: [
+      {
+        title: "PostgreSQL",
+        logo: postgresLogo,
+        nivel: 3,
+      },
+    ],
+    otros: [
+      {
+        title: "Node.js",
+        logo: nodejsLogo,
+        nivel: "-",
+      },
+      {
+        title: "Sass",
+        logo: sassLogo,
+        nivel: 3,
+      },
+      {
+        title: "Figma",
+        logo: figmaLogo,
+        nivel: 3,
+      },
+    ],
+  },
   traducciones: {
     es: {
       opcionesBarraNavegacion: [
@@ -32,69 +97,13 @@ const initialState = {
         "Mi objetivo profesional es convertirme en un programador destacado gracias a mis habilidades y conocimientos. Me comprometo a seguir aprendiendo y actualizándome constantemente en este campo para lograr este objetivo. Además, me interesa explorar otras tecnologías, como la inteligencia artificial, y me gustaría tener la oportunidad de trabajar con ellas en la práctica.",
       aboutP3:
         "Creo en la importancia de la honestidad, la ética y la responsabilidad en mi trabajo. Estoy comprometido a trabajar de manera diligente y eficiente en cada proyecto, y a colaborar con mi equipo para lograr los mejores resultados posibles.",
-      lenguajes: [
-        {
-          title: "HTML",
-          logo: htmlLogo,
-          nivel: 4,
-        },
-        {
-          title: "CSS",
-          logo: cssLogo,
-          nivel: 3,
-        },
-        {
-          title: "JavaScript",
-          logo: javascriptLogo,
-          nivel: 4,
-        },
-      ],
-      librerias: [
-        {
-          title: "React",
-          logo: reactLogo,
-          nivel: 4,
-        },
-        {
-          title: "Redux",
-          logo: reduxLogo,
-          nivel: 4,
-        },
-        {
-          title: "React Router",
-          logo: reactRouterLogo,
-          nivel: 4,
-        },
-        {
-          title: "Sequelize",
-          logo: sequelizeLogo,
-          nivel: 4,
-        },
-      ],
-      dataBases: [
-        {
-          title: "PostgreSQL",
-          logo: postgresLogo,
-          nivel: 3,
-        },
-      ],
-      otros: [
-        {
-          title: "Node.js",
-          logo: nodejsLogo,
-          nivel: "-",
-        },
-        {
-          title: "Sass",
-          logo: sassLogo,
-          nivel: 3,
-        },
-        {
-          title: "Figma",
-          logo: figmaLogo,
-          nivel: 3,
-        },
-      ],
+      skills: {
+        lenguajes: "Lenguajes:",
+        librerias: "Librerías:",
+        dataBases: "Bases de datos:",
+        otros: "Entornos, Preprocesadores, Herramientas y otros:",
+        footer: "Algunos íconos fueron tomados de la página",
+      },
     },
     en: {
       opcionesBarraNavegacion: [
@@ -112,6 +121,13 @@ const initialState = {
         "My professional goal is to become an outstanding programmer based on my skills and knowledge. I am committed to continuing my learning and staying up-to-date in this field to achieve this goal. Additionally, I have a strong interest in exploring other technologies, such as artificial intelligence, and I would like to have the opportunity to work with them in practice.",
       aboutP3:
         "I believe in the importance of honesty, ethics, and responsibility in my work. I am committed to working diligently and efficiently on each project, and to collaborating with my team to achieve the best possible results.",
+      skills: {
+        lenguajes: "Languages:",
+        librerias: "Libraries:",
+        dataBases: "Databases:",
+        otros: "Environments, preprocessors, tools and others:",
+        footer: "Some icons were taken from the page",
+      },
     },
   },
 };
