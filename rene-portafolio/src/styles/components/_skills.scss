@@ -17,7 +17,6 @@
   padding-left: 10vw;
   padding-right: 10vw;
   padding-top: 15vh;
-  padding-bottom: 15vh;
   .skills_section{
     padding: 1vw;
     display: flex;
@@ -29,6 +28,19 @@
     margin-bottom: 1em;
     color: $color_contraste_claro;
     font-size: 3vh;
+  }
+  footer{
+    background-color:$color_secundario_medio;
+    width: 100%;
+    margin-top: 5vh;
+    color: beige;
+    text-align: center;
+    p{
+      margin: 7px;
+      a{
+        color:rgb(73, 159, 221);
+      }
+    }
   }
 }
 

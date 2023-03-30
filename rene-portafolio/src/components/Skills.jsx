@@ -52,7 +52,7 @@ export default function Skills(){
         ))}
       </div>
       <footer>
-        <p>algunos íconos fueron tomados de la siguiente página <a href="https://www.flaticon.com/free-icons/linkedin">Flaticon</a></p>
+        <p>Algunos íconos fueron tomados de la página <a href="https://www.flaticon.com/">Flaticon</a></p>
       </footer>
     </div>
   )
