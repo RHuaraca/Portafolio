@@ -2,14 +2,15 @@ import Skill from "./Skill";
 import {useSelector} from "react-redux";
 
 export default function Skills(){
-  const idiomaActual = useSelector(state=>state.idioma)
-  const lenguajes = useSelector(state=>state.habilidades.lenguajes)
-  const librerias = useSelector(state=>state.habilidades.librerias)
-  const dataBases = useSelector(state=>state.habilidades.dataBases)
-  const otros = useSelector(state => state.habilidades.otros)
-  const idiomas = useSelector(state => state.traducciones[idiomaActual].skills)
+  const idiomaActual = useSelector(state=>state.idioma);
+  const lenguajes = useSelector(state=>state.habilidades.lenguajes);
+  const librerias = useSelector(state=>state.habilidades.librerias);
+  const dataBases = useSelector(state=>state.habilidades.dataBases);
+  const otros = useSelector(state => state.habilidades.otros);
+  const idiomas = useSelector(state => state.traducciones[idiomaActual].skills);
+  const colorMode = useSelector(state => state.modoColor);
   return(
-    <div className="skills_container">
+    <div className={colorMode==="oscuro"?"skills_container":"skills_container_ligthMode"}>
       <h5>{idiomas.lenguajes}</h5>
       <div className="skills_section">
         {lenguajes?.map((lenguaje,i)=>(
