@@ -1,0 +1,13 @@
+.portafolio_container{
+  background-color: $color_terciario_claro  ;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .portafolio_proyectos_container{
+    background-color: aqua;
+    max-width: 75vw;
+    display: flex;
+  }
+}

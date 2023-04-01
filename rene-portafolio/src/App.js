@@ -4,6 +4,7 @@ import DarkmodeSwitch from "./components/DarkmodeSwitch";
 import Home from "./components/Home";
 import IconoGithub from "./components/IconoGithub";
 import NavBarInicio from "./components/NavBarInicio";
+import Portafolio from "./components/Portafolio";
 import Skills from "./components/Skills";
 import SwitchIngles from "./components/SwitchIngles";
 
@@ -20,15 +21,7 @@ function App() {
         <Route path="/Home" element={<Home />} />
         <Route path="/About" element={<About />} />
         <Route path="/Skills" element={<Skills />} />
-        <Route
-          path="/Portfolio"
-          element={
-            <>
-              {/* <NavBarOthers/> */}
-              <div>Portafolio</div>
-            </>
-          }
-        />
+        <Route path="/Portfolio" element={<Portafolio />} />
         <Route path="/Contact" element={<div>Contacto</div>} />
         <Route path="*" element={<Navigate replace to="/Home" />} />
       </Routes>
