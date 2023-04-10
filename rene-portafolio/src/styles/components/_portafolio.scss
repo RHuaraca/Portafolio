@@ -5,9 +5,53 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  h5{
+    margin-top: 12vh;
+    margin-bottom: 1vh;
+    font-size:2em;
+  }
   .portafolio_proyectos_container{
-    background-color: aqua;
-    max-width: 75vw;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    .controles{
+      width: 50px;
+      height: 50px;
+      opacity: 20%;
+      cursor: pointer;
+    }
+    .controles:hover{
+      opacity: 100%;
+    }
+
+    .fade-enter {
+      background-color: black;
+      opacity: 0;
+      position: absolute;
+    }
+    .fade-enter-active {
+      opacity: 1;
+      transition: opacity 500ms ease-in-out;
+    }
+    .fade-exit {
+      opacity: 1;
+    }
+    .fade-exit-active {
+      opacity: 0;
+      transition: opacity 500ms ease-in-out;
+    }
+  }
+  .portafolio_puntos_container{
+    display: flex;
+    gap: 1em;
+    p{
+      cursor: pointer;
+      margin: 0;
+      font-size: 3em;
+      opacity: 20%;
+    }
+    .active{
+      opacity: 100%;
+    }
   }
 }

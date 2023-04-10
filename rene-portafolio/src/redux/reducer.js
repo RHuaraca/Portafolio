@@ -11,6 +11,8 @@ import sequelizeLogo from "../assets/sequelize.png";
 import nodejsLogo from "../assets/nodejs.png";
 import sassLogo from "../assets/sass.png";
 import figmaLogo from "../assets/figma.png";
+import proy1 from "../assets/proy1.png";
+import proy2 from "../assets/proy2.png";
 // Define el estado inicial del reducer
 const initialState = {
   modoColor: "oscuro",
@@ -104,6 +106,19 @@ const initialState = {
         otros: "Entornos, Preprocesadores, Herramientas y otros:",
         footer: "Algunos íconos fueron tomados de la página",
       },
+      proyectos: [
+        {
+          img: proy1,
+          title: "Henry Countries",
+          description: `Durante la penúltima evaluación del bootcamp de Henry, desarrollé de forma individual el proyecto 'Henry Countries'. La aplicación consta de una interfaz front-end desarrollada en React con Redux, y para los estilos se ha utilizado únicamente CSS. El back-end se ha construido utilizando Express, Sequelize y PostgreSQL como base de datos.\nCon esta aplicación, los usuarios pueden explorar más de 240 países y obtener información relevante como la bandera, población y área del país, entre otros. La búsqueda es dinámica y se puede realizar a través de una barra de búsqueda o por categorías. Además, se permite agregar o eliminar actividades de un país, lo que brinda una experiencia personalizada a los usuarios. También se ha implementado la funcionalidad de buscar países por actividad.`,
+        },
+        {
+          img: proy2,
+          title: "Cava Verdot",
+          description:
+            "El proyecto grupal desarrollado por 5 integrantes como evaluación final del bootcamp de Henry consiste en un e-commerce de bebidas alcohólicas llamado 'Cava Verdot'. La aplicación cuenta con un front-end desarrollado con React, que permite a los usuarios realizar búsquedas a través de una barra de búsqueda, filtrando por categorías, precios, origen de procedencia, entre otros filtros. Además, se puede acceder a los detalles de cada bebida.\nPara realizar pagos, se ha integrado una pasarela de pagos desarrollada con Stripe, para lo cual es necesario registrarse a través de un formulario o con una cuenta de Google, implementado con Firebase. La protección de contraseñas y de información sensible se ha implementado con JWT y se ha guardado de forma protegida la información a través de una función hasheadora.\nPara el back-end se usó Express junto con Sequelize y PostgreSQL que proporciona una arquitectura sólida en la aplicación y que permite gestionar fácilmente las solicitudes HTTP. Además, Sequelize hace que la comunicación con la base de datos sea más fácil y segura, al tiempo que proporciona una capa de abstracción entre la base de datos y la aplicación, lo que significa que los cambios en el esquema de la base de datos pueden ser gestionados con mayor facilidad.",
+        },
+      ],
     },
     en: {
       opcionesBarraNavegacion: [
