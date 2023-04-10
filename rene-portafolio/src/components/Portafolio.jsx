@@ -7,9 +7,13 @@ import {TransitionGroup, CSSTransition} from "react-transition-group";
 
 export default function Portafolio (){
   const idiomaActual = useSelector(state=>state.idioma);
-  const arrayProyects = useSelector(state=>state.traducciones[idiomaActual].proyectos);
+  const tituloPortafolio = useSelector(state=>state.traducciones[idiomaActual].portafolio.titulo)
+  const arrayProyects = useSelector(state=>state.traducciones[idiomaActual].portafolio.proyectos);
   const [proyectoActual, setProyectoActual] = useState(0);
   const [pause, setPause] = useState(false);
+  const pauseTransition = useSelector(state=>state.pauseTransition);
+  const isMobile = window.innerWidth <= 600;
+
   function cambiar(i){
     setProyectoActual(i)
   }
@@ -23,16 +27,18 @@ export default function Portafolio (){
     setPause(activar)
   }
   useEffect(()=>{
-    const interval = setInterval(()=>{
+    if(!isMobile && !pauseTransition){
+      const interval = setInterval(()=>{
       if(!pause)avanzar()
     }, 5000);
     return ()=>clearInterval(interval);
+    }
   });
 
 
   return(
     <div className="portafolio_container">
-      <h5>Proyectos desarrollados</h5>
+      <h5>{tituloPortafolio}</h5>
       <div className="portafolio_proyectos_container">
         <img src={regresarImg} alt="regresar" onClick={()=>regresar()} className="controles"/>
           <div onMouseEnter={()=>pausar(true)} onMouseLeave={()=>pausar(false)} style={{position:"relative", height:"36vw", width:"70vw"}}>
@@ -42,6 +48,12 @@ export default function Portafolio (){
               imagen={arrayProyects[proyectoActual].img} 
               titulo={arrayProyects[proyectoActual].title} 
               descripcion={arrayProyects[proyectoActual].description} 
+              botonVideo={arrayProyects[proyectoActual].botonVideo}
+              videoId={arrayProyects[proyectoActual].videoId}
+              botonCodigo={arrayProyects[proyectoActual].botonCodigo}
+              enlaceCodigo={arrayProyects[proyectoActual].enlaceCodigo}
+              botonPagina={arrayProyects[proyectoActual].botonPagina}
+              enlacePagina={arrayProyects[proyectoActual].enlacePagina}
               key={proyectoActual}/>
           </CSSTransition>
         </TransitionGroup>

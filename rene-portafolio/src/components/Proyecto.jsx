@@ -1,6 +1,17 @@
-export default function Proyecto ({imagen, titulo, descripcion}){
+import {useState} from "react";
+import VideoModal from "./VideoModal";
+import {useDispatch} from "react-redux";
+import {pausarAnimacion} from "../redux/actions.js"
+
+export default function Proyecto ({imagen, titulo, descripcion, botonVideo, videoId, botonCodigo, enlaceCodigo, botonPagina, enlacePagina}){
+  const [isOpen, setIsOpen] = useState(false);
+  const dispatch = useDispatch()
+  const toggleModal = () => {
+    setIsOpen(!isOpen);
+    dispatch(pausarAnimacion())
+  };
+  //console.log(isOpen)
   const parrafos = descripcion.split("\n");
-  //console.log(parrafos)
   return(
     <div className="proyecto_container" >
       <img src={imagen} alt={`imagen de ${titulo}`} />
@@ -10,11 +21,15 @@ export default function Proyecto ({imagen, titulo, descripcion}){
           {parrafos?.map((parrafo,i)=>(<p key={i}>{parrafo}{"\n"}</p>))}
         </div>
         <div className="botones">
-          <button>ver vídeo</button>
-          <button>ver código</button>
-          <button>visitar página</button>
+          <button onClick={toggleModal}>{botonVideo}</button>
+          <button><a href={enlaceCodigo} target="_blank" rel="noreferrer">{botonCodigo}</a></button>
+          <button><a href={enlacePagina} target="_blank" rel="noreferrer">{botonPagina}</a></button>
         </div>
       </div>
+      {isOpen?<div className="modal">
+      <span className="close" onClick={toggleModal}>&times;</span>
+      <VideoModal videoId={videoId} titulo={titulo}/>
+      </div>:null}
     </div>
   )
 }
