@@ -7,6 +7,7 @@ import {TransitionGroup, CSSTransition} from "react-transition-group";
 
 export default function Portafolio (){
   const idiomaActual = useSelector(state=>state.idioma);
+  const modoActual = useSelector(state=>state.modoColor)
   const tituloPortafolio = useSelector(state=>state.traducciones[idiomaActual].portafolio.titulo)
   const arrayProyects = useSelector(state=>state.traducciones[idiomaActual].portafolio.proyectos);
   const [proyectoActual, setProyectoActual] = useState(0);
@@ -37,7 +38,7 @@ export default function Portafolio (){
 
 
   return(
-    <div className="portafolio_container">
+    <div className={modoActual==="oscuro"?"portafolio_container":"portafolio_container_lightMode"}>
       <h5>{tituloPortafolio}</h5>
       <div className="portafolio_proyectos_container">
         <img src={regresarImg} alt="regresar" onClick={()=>regresar()} className="controles"/>

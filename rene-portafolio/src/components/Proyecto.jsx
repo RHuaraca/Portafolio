@@ -1,9 +1,10 @@
 import {useState} from "react";
 import VideoModal from "./VideoModal";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {pausarAnimacion} from "../redux/actions.js"
 
 export default function Proyecto ({imagen, titulo, descripcion, botonVideo, videoId, botonCodigo, enlaceCodigo, botonPagina, enlacePagina}){
+  const modoActual = useSelector(state=>state.modoColor);
   const [isOpen, setIsOpen] = useState(false);
   const dispatch = useDispatch()
   const toggleModal = () => {
@@ -13,7 +14,7 @@ export default function Proyecto ({imagen, titulo, descripcion, botonVideo, vide
   //console.log(isOpen)
   const parrafos = descripcion.split("\n");
   return(
-    <div className="proyecto_container" >
+    <div className={modoActual==="oscuro"?"proyecto_container":"proyecto_container_lightMode"}>
       <img src={imagen} alt={`imagen de ${titulo}`} />
       <div className="visible_container">
         <div className="proyecto_text_container">
