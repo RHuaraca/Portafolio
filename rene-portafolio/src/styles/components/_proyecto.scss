@@ -85,13 +85,14 @@
         width: 15vw;
         background-color: $color_contraste_oscuro;
         cursor: pointer;
+        color:$color_contraste_claro;
         a{
-          color: $color_primario_oscuro;
           text-decoration: none;
+          color:$color_contraste_claro;
         }
       }
       button:hover{
-        background-color:#366ed6;;
+        background-color:#366ed6;
       }
     }
   }
@@ -138,14 +139,15 @@
         padding-top: 1vh;
         padding-bottom: 1vh;
         margin-top: 1vh;
+        color: $color_contraste_claro;
         background-color: $color_contraste_oscuro;
         a{
-          color: $color_primario_oscuro;
           text-decoration: none;
+          color: $color_contraste_claro;
         }
       }
       button:hover{
-        background-color:#366ed6;;
+        background-color: $color_contraste_oscuro;
       }
     }
   }

@@ -1,4 +1,4 @@
-//plantilla
 export const CAMBIAR_IDIOMA = "CAMBIAR_IDIOMA";
 export const CAMBIAR_MODO_COLOR = "CAMBIAR_MODO_COLOR";
 export const PAUSAR_ANIMACION = "PAUSAR_ANIMACION";
+export const SETEAR_COLOR = "SETEAR_COLOR";

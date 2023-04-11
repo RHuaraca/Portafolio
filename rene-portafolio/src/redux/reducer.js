@@ -3,6 +3,7 @@ import {
   CAMBIAR_IDIOMA,
   CAMBIAR_MODO_COLOR,
   PAUSAR_ANIMACION,
+  SETEAR_COLOR,
 } from "./actionTypes.js";
 import htmlLogo from "../assets/html5.png";
 import cssLogo from "../assets/css-3.png";
@@ -139,6 +140,18 @@ const initialState = {
           },
         ],
       },
+      contact: {
+        title: "Contáctame",
+        p1: "Por favor, póngase en contacto conmigo a travéz de este formulario y le estaré respondiendo dentro de las 24 horas:",
+        p2: "o puedes llamarme al +51 933 423 315, enviarme un correo al renepersonal@gmai.com y tambien puedes seguirme a través de mis redes sociales.",
+        formulario: {
+          nombre: "Nombre",
+          correo: "Correo",
+          mensaje: "Mensaje",
+          enviar: "Enviar",
+          gracias: "Gracias por contactarme!",
+        },
+      },
     },
     en: {
       opcionesBarraNavegacion: [
@@ -191,6 +204,18 @@ const initialState = {
           },
         ],
       },
+      contact: {
+        title: "Contact me",
+        p1: "Please, get in touch with me through this form and I'll get back to you within 24 hours:",
+        p2: "or you can call me at +51 933 423 315, send me an email at renepersonal@gmail.com, and you can also follow me through my social media channels.",
+        formulario: {
+          nombre: "Name",
+          correo: "Email",
+          mensaje: "Message",
+          enviar: "Send",
+          gracias: "Thank you for contacting me!",
+        },
+      },
     },
   },
 };
@@ -214,6 +239,11 @@ const rootReducer = (state = initialState, action) => {
       return {
         ...state,
         pauseTransition: !state.pauseTransition,
+      };
+    case SETEAR_COLOR:
+      return {
+        ...state,
+        modoColor: action.payload,
       };
     default:
       // Devuelve el estado sin cambios para cualquier otra acción

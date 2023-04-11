@@ -3,6 +3,7 @@ import {
   CAMBIAR_IDIOMA,
   CAMBIAR_MODO_COLOR,
   PAUSAR_ANIMACION,
+  SETEAR_COLOR,
 } from "./actionTypes.js";
 
 export const cambiarIdioma = () => ({
@@ -15,4 +16,9 @@ export const cambiarModoColor = () => ({
 
 export const pausarAnimacion = () => ({
   type: PAUSAR_ANIMACION,
+});
+
+export const setearColor = (color) => ({
+  type: SETEAR_COLOR,
+  payload: color,
 });

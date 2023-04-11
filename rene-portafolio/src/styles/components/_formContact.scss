@@ -1,0 +1,117 @@
+.mensaje_enviado{
+  font-size: 30px;
+}
+.form_container{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  input{
+    height: 5vh;
+    appearance: none;
+    background-color: $color_secundario_medio;
+    transition: background-color 1s ease;
+    border: 1px solid $color_primario_oscuro;
+    color:$color_contraste_claro ;
+    font-size: 17px;
+    margin-bottom: 5%;
+  }
+  input:focus{
+    appearance: none;
+    outline: none;
+    background-color: rgb(65, 65, 65);
+    transition: background-color 0.25s ease ;
+    border: 1px solid $color_secundario_medio;
+  }
+  textarea{
+    appearance: none;
+    height: 15vh;
+    margin-bottom: 4%;
+    background-color: $color_secundario_medio;
+    transition: background-color 1s ease;
+    border: 1px solid $color_primario_oscuro;
+    color:$color_contraste_claro ;
+    font-size: 17px;
+  }
+  textarea:focus{
+    appearance: none;
+    outline: none;
+    background-color: rgb(65, 65, 65);
+    transition: background-color 0.25s ease;
+    border: 1px solid $color_secundario_medio;
+  }
+  button{
+    height: 5vh;
+    background-color:$color_contraste_oscuro;
+    transition: background-color 1s;
+    color: $color_contraste_claro;
+  }
+  button:hover{
+    background-color:#366ed6;
+    transition: background-color 0.25s ease;
+    cursor: pointer;
+  }
+  @media screen and (max-width:600px){
+    width: 100%;
+    button:hover{
+      background-color:$color_contraste_oscuro;
+    }
+  }
+}
+
+.form_container_ligthMode{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  input{
+    height: 5vh;
+    appearance: none;
+    background-color: $colorc_contraste_oscuro;
+    transition: background-color 1s ease;
+    border: 1px solid $colorc_primario_oscuro;
+    color:$colorc_contraste_claro ;
+    font-size: 17px;
+    margin-bottom: 5%;
+  }
+  input:focus{
+    appearance: none;
+    outline: none;
+    background-color: #71320d;
+    transition: background-color 0.25s ease;
+    border: 1px solid $colorc_secundario_medio;
+  }
+  textarea{
+    appearance: none;
+    height: 15vh;
+    margin-bottom: 4%;
+    background-color: $colorc_contraste_oscuro;
+    transition: background-color 1s ease;
+    border: 1px solid $colorc_primario_oscuro;
+    color:$colorc_contraste_claro ;
+    font-size: 17px;
+  }
+  textarea:focus{
+    appearance: none;
+    outline: none;
+    background-color: #71320d;
+    transition: background-color 0.25s ease;
+    border: 1px solid $color_secundario_medio;
+  }
+  button{
+    height: 5vh;
+    background-color:$colorc_primario_oscuro ;
+    transition: background-color 1s;
+    color: $colorc_contraste_claro;
+  }
+  button:hover{
+    background-color:#4d1a1aa1;
+    transition: background-color 0.25s ease;
+    cursor: pointer;
+  }
+  @media screen and (max-width:600px){
+    width: 100%;
+    button:hover{
+      background-color:$colorc_contraste_oscuro;
+      transition: background-color 1s;
+    }
+  }
+}
