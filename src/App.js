@@ -19,12 +19,12 @@ function App() {
       </div>
       <IconoGithub />
       <Routes>
-        <Route path="/Home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/About" element={<About />} />
         <Route path="/Skills" element={<Skills />} />
         <Route path="/Portfolio" element={<Portafolio />} />
         <Route path="/Contact" element={<Contact />} />
-        <Route path="*" element={<Navigate replace to="/Home" />} />
+        <Route path="*" element={<Navigate replace to="/" />} />
       </Routes>
     </>
   );

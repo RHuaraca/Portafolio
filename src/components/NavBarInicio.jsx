@@ -12,8 +12,10 @@ export default function NavBarInicio(){
     function ocultar(){
         setMenu(menu==="mostrar"?menu="ocultar":menu="mostrar")
     }
-    let opciones = useSelector(state=>state.traducciones[idiomaActual].opcionesBarraNavegacion);
-    let opcionesIngles = useSelector(state=>state.traducciones.en.opcionesBarraNavegacion);
+    const opciones = useSelector(state=>state.traducciones[idiomaActual].opcionesBarraNavegacion);
+    const opcionesSinInicio = opciones.slice(1);
+    const opcionesIngles = useSelector(state=>state.traducciones.en.opcionesBarraNavegacion);
+    const opcionesInglesSinInicio = opcionesIngles.slice(1);
     return (
         <nav className={modoActual==="oscuro"?"navbar_container":"navbar_container_lightMode"}>
             <div className="navbar_imageContainer">
@@ -22,10 +24,15 @@ export default function NavBarInicio(){
                 </NavLink>
                 <img src={iconoMenu} alt="menu" className={location.pathname==="/Home"?"menuImgInicio":"menuImgOthers"} onClick={()=>ocultar()}/>   
             </div>
-            <ul className={menu}>
-                {opciones.map((opcion,i)=>(
+            <ul className={menu} >
+                <li onClick={()=>ocultar()}>
+                    <NavLink to="/" activeclassname="active" className="enlace">
+                        {opciones[0]}
+                    </NavLink>
+                </li>
+                {opcionesSinInicio.map((opcion,i)=>(
                     <li key={i} onClick={()=>ocultar()}>
-                        <NavLink to={location.pathname!==opcionesIngles[i]?`/${opcionesIngles[i]}`:null} className="enlace">
+                        <NavLink to={location.pathname!==opcionesInglesSinInicio[i]?`/${opcionesInglesSinInicio[i]}`:null} className="enlace">
                             {opcion}
                         </NavLink>
                     </li>
