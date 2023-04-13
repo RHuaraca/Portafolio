@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import facebookIcon from "../assets/facebook.png";
 import instagramIcon from "../assets/instagram.png";
 import linkedinIcon from "../assets/linkedin.png";
@@ -8,7 +9,16 @@ export default function Contact (){
   const color = useSelector(state=>state.modoColor);
   const idiomaActual = useSelector(state=>state.idioma);
   const text = useSelector(state=>state.traducciones[idiomaActual].contact);
-  const isMobile = window.innerWidth <= 600;
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 600);
+  useEffect(()=>{
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 600);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  },[]);
   if(isMobile){
     return(
       <div className={color==="oscuro"?"contact_container":"contact_container_ligthMode"}>
@@ -20,6 +30,7 @@ export default function Contact (){
             correo={text.formulario.correo}
             mensaje={text.formulario.mensaje}
             gracias={text.formulario.gracias}
+            enviar={text.formulario.enviar}
           />
           <p>{text.p2}</p>
           <div className="icons">

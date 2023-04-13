@@ -3,6 +3,7 @@
   transition: background-color 1s ease;
   min-height: 100vh;
   display: flex;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
   padding-left: 15vw;
