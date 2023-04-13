@@ -1,11 +1,12 @@
 import Proyecto from "./Proyecto";
 import { useSelector } from "react-redux";
-import { useEffect, useState } from "react";
+import { useEffect, useState, forwardRef } from "react";
 import avanzarImg from "../assets/flecha-correcta.png";
 import regresarImg from "../assets/flecha-izquierda.png";
 import {TransitionGroup, CSSTransition} from "react-transition-group";
 
-export default function Portafolio (){
+//export default function Portafolio (){
+const Portafolio = forwardRef((props, ref)=>{
   const idiomaActual = useSelector(state=>state.idioma);
   const modoActual = useSelector(state=>state.modoColor)
   const tituloPortafolio = useSelector(state=>state.traducciones[idiomaActual].portafolio.titulo)
@@ -44,8 +45,9 @@ export default function Portafolio (){
         <img src={regresarImg} alt="regresar" onClick={()=>regresar()} className="controles"/>
           <div onMouseEnter={()=>pausar(true)} onMouseLeave={()=>pausar(false)} style={{position:"relative", height:"36vw", width:"70vw"}}>
             <TransitionGroup>
-          <CSSTransition key={proyectoActual} classNames="fade" timeout={500}>
-            <Proyecto 
+              <CSSTransition key={proyectoActual} classNames="fade" timeout={500}>
+              <Proyecto 
+              ref={ref}
               imagen={arrayProyects[proyectoActual].img} 
               titulo={arrayProyects[proyectoActual].title} 
               descripcion={arrayProyects[proyectoActual].description} 
@@ -56,8 +58,8 @@ export default function Portafolio (){
               botonPagina={arrayProyects[proyectoActual].botonPagina}
               enlacePagina={arrayProyects[proyectoActual].enlacePagina}
               key={proyectoActual}/>
-          </CSSTransition>
-        </TransitionGroup>
+              </CSSTransition>
+            </TransitionGroup>
           </div>
         <img src={avanzarImg} alt="avanzar" onClick={()=>avanzar()} className="controles"/>
       </div>
@@ -73,4 +75,7 @@ export default function Portafolio (){
       </div>
     </div>
   )
-}
+
+});
+
+export default Portafolio;

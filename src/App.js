@@ -8,23 +8,8 @@ import Portafolio from "./components/Portafolio";
 import Skills from "./components/Skills";
 import SwitchIngles from "./components/SwitchIngles";
 import Contact from "./components/Contact";
-/* import { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { setearColor } from "./redux/actions.js"; */
 
 function App() {
-  /* const dispatch = useDispatch();
-  useEffect(() => {
-    const preferenciaDeColor =
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches;
-    if (preferenciaDeColor) {
-      dispatch(setearColor("oscuro"));
-    } else {
-      dispatch(setearColor("claro"));
-    }
-    console.log(preferenciaDeColor);
-  }, []); */
   return (
     <>
       <div className="header_container">

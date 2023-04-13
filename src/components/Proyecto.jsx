@@ -24,7 +24,7 @@ export default function Proyecto ({imagen, titulo, descripcion, botonVideo, vide
         <div className="botones">
           <button onClick={toggleModal}>{botonVideo}</button>
           <button><a href={enlaceCodigo} target="_blank" rel="noreferrer">{botonCodigo}</a></button>
-          <button><a href={enlacePagina} target="_blank" rel="noreferrer">{botonPagina}</a></button>
+          {enlacePagina!=="--"?<button><a href={enlacePagina} target="_blank" rel="noreferrer">{botonPagina}</a></button>:null}
         </div>
       </div>
       {isOpen?<div className="modal">

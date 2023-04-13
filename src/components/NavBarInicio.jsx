@@ -17,7 +17,7 @@ export default function NavBarInicio(){
     return (
         <nav className={modoActual==="oscuro"?"navbar_container":"navbar_container_lightMode"}>
             <div className="navbar_imageContainer">
-                <NavLink to="/About" activeClassname="active">
+                <NavLink to="/About" activeclassname="active">
                     <img src={foto}  alt="foto de perfil" className={location.pathname==="/Home"?`perfilInicio`:location.pathname==="/About"?'perfilAbout':'perfilOthers'}/>
                 </NavLink>
                 <img src={iconoMenu} alt="menu" className={location.pathname==="/Home"?"menuImgInicio":"menuImgOthers"} onClick={()=>ocultar()}/>   

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import sol from "../assets/sol.png";
 import luna from "../assets/luna.png";
 import {useSelector, useDispatch} from "react-redux";
