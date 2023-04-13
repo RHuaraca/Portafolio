@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/Portafolio/static/css/main.4053ec4f.css",
+    "main.js": "/Portafolio/static/js/main.7ee61313.js",
+    "static/js/787.12389590.chunk.js": "/Portafolio/static/js/787.12389590.chunk.js",
+    "static/media/proy2.png": "/Portafolio/static/media/proy2.0e6bf92f70f3f07ab8bb.png",
+    "static/media/proy1.png": "/Portafolio/static/media/proy1.2e7d02e4bbe014cbb193.png",
+    "static/media/fondoClaro.jpeg": "/Portafolio/static/media/fondoClaro.b86cad800780ec702561.jpeg",
+    "static/media/perfilOriginal.jpeg": "/Portafolio/static/media/perfilOriginal.b0f1f769d6050d2649a0.jpeg",
+    "static/media/instagram.png": "/Portafolio/static/media/instagram.79535458a8a6d88f81d4.png",
+    "static/media/iconoCorreo.png": "/Portafolio/static/media/iconoCorreo.eff4f449e29ca9f168f2.png",
+    "static/media/postgresql.png": "/Portafolio/static/media/postgresql.cd0c83dd08aeb27a49c5.png",
+    "static/media/iconoGithub.png": "/Portafolio/static/media/iconoGithub.359883c71507cf2fbdb5.png",
+    "static/media/react.png": "/Portafolio/static/media/react.3bf6fb4b18b1f904676d.png",
+    "static/media/estados-unidos.png": "/Portafolio/static/media/estados-unidos.4d9d990626a3df96a265.png",
+    "static/media/twitter.png": "/Portafolio/static/media/twitter.c6e48e60f856cb822273.png",
+    "static/media/iconoLinkedin.png": "/Portafolio/static/media/iconoLinkedin.f5871c9a58019d6f8b22.png",
+    "static/media/luna.png": "/Portafolio/static/media/luna.cfa37b178f3890f6d652.png",
+    "static/media/iconoWhatsapp.png": "/Portafolio/static/media/iconoWhatsapp.9dafb32a0c6b15c42532.png",
+    "static/media/facebook.png": "/Portafolio/static/media/facebook.01a470d813915c298403.png",
+    "static/media/sass.png": "/Portafolio/static/media/sass.c7470a14305d1294a2bd.png",
+    "static/media/sequelize.png": "/Portafolio/static/media/sequelize.1033be26e5ef8e5bba73.png",
+    "static/media/html5.png": "/Portafolio/static/media/html5.2c6a71b184b518b01b9a.png",
+    "static/media/figma.png": "/Portafolio/static/media/figma.72fbc535ebe253a5dbc4.png",
+    "static/media/sol.png": "/Portafolio/static/media/sol.7f558295ef8d38eb1581.png",
+    "static/media/css-3.png": "/Portafolio/static/media/css-3.463e319bad8e0edf1ef7.png",
+    "static/media/linkedin.png": "/Portafolio/static/media/linkedin.6892b3ae328c7a1e055f.png",
+    "static/media/espana.png": "/Portafolio/static/media/espana.7ab20088ad372c62ab72.png",
+    "static/media/js.png": "/Portafolio/static/media/js.3dfb665e058d08c99f28.png",
+    "static/media/react-router.png": "/Portafolio/static/media/react-router.c7541af384c1b7593668.png",
+    "static/media/redux.svg": "/Portafolio/static/media/redux.71eb13e2fdd1de624e9a856125906e3b.svg",
+    "index.html": "/Portafolio/index.html",
+    "main.4053ec4f.css.map": "/Portafolio/static/css/main.4053ec4f.css.map",
+    "main.7ee61313.js.map": "/Portafolio/static/js/main.7ee61313.js.map",
+    "787.12389590.chunk.js.map": "/Portafolio/static/js/787.12389590.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4053ec4f.css",
+    "static/js/main.7ee61313.js"
+  ]
+}
