@@ -10,7 +10,7 @@ import SwitchIngles from "./components/SwitchIngles";
 import Contact from "./components/Contact";
 
 function App() {
-  const urlBase = "https://rhuaraca.github.io/Portfolio";
+  //const urlBase = "https://rhuaraca.github.io/Portfolio";
   return (
     <>
       <div className="header_container">
@@ -20,12 +20,12 @@ function App() {
       </div>
       <IconoGithub />
       <Routes>
-        <Route path={`${urlBase}/`} element={<Home />} />
-        <Route path={`${urlBase}/About`} element={<About />} />
-        <Route path={`${urlBase}/Skills`} element={<Skills />} />
-        <Route path={`${urlBase}/Portfolio`} element={<Portafolio />} />
-        <Route path={`${urlBase}/Contact`} element={<Contact />} />
-        <Route path="*" element={<Navigate replace to={`${urlBase}/`} />} />
+        <Route path={`/`} element={<Home />} />
+        <Route path={`/About`} element={<About />} />
+        <Route path={`/Skills`} element={<Skills />} />
+        <Route path={`/Portfolio`} element={<Portafolio />} />
+        <Route path={`/Contact`} element={<Contact />} />
+        <Route path="*" element={<Navigate replace to={`/`} />} />
       </Routes>
     </>
   );

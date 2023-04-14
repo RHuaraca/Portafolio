@@ -17,24 +17,24 @@ export default function NavBarInicio(){
     const opcionesIngles = useSelector(state=>state.traducciones.en.opcionesBarraNavegacion);
     const opcionesInglesSinInicio = opcionesIngles.slice(1);
 
-    const urlBase = "https://rhuaraca.github.io/Portfolio";
+    //const urlBase = "https://rhuaraca.github.io/Portfolio";
     return (
         <nav className={modoActual==="oscuro"?"navbar_container":"navbar_container_lightMode"}>
             <div className="navbar_imageContainer">
-                <NavLink to={`${urlBase}/About`} activeclassname="active">
+                <NavLink to={`/About`} activeclassname="active">
                     <img src={foto}  alt="foto de perfil" className={location.pathname==="/Home"?`perfilInicio`:location.pathname==="/About"?'perfilAbout':'perfilOthers'}/>
                 </NavLink>
                 <img src={iconoMenu} alt="menu" className={location.pathname==="/Home"?"menuImgInicio":"menuImgOthers"} onClick={()=>ocultar()}/>   
             </div>
             <ul className={menu} >
                 <li onClick={()=>ocultar()}>
-                    <NavLink to={`${urlBase}/`} activeclassname="active" className="enlace">
+                    <NavLink to={`/`} activeclassname="active" className="enlace">
                         {opciones[0]}
                     </NavLink>
                 </li>
                 {opcionesSinInicio.map((opcion,i)=>(
                     <li key={i} onClick={()=>ocultar()}>
-                        <NavLink to={location.pathname!==opcionesInglesSinInicio[i]?`${urlBase}/${opcionesInglesSinInicio[i]}`:null} className="enlace">
+                        <NavLink to={location.pathname!==opcionesInglesSinInicio[i]?`/${opcionesInglesSinInicio[i]}`:null} className="enlace">
                             {opcion}
                         </NavLink>
                     </li>
